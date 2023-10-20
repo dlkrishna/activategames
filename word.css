@@ -1,0 +1,339 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f4c531;
+}
+.container {
+  
+  height: 680px; /* Adjust the height as needed */
+  font-size: 16px;
+  background-color: #ffffff;
+  width: 100vw;
+  max-width: 36em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 0.6em;
+  box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+}
+
+/* Style for the Hangman container with default color */
+.container {
+  
+  background-color: white; /* Default color */
+}
+
+/* Additional styles for other colors */
+.container.red {
+  background-color: rgb(168, 52, 52);
+}
+
+.container.blue {
+  background-color: rgb(81, 81, 177);
+}
+
+.container.green {
+  background-color: rgb(106, 197, 106);
+}
+
+.container.white {
+  background-color: white;
+}
+
+.container.orange {
+  background-color: rgb(239, 195, 114);
+}
+
+
+#options-container {
+  text-align: center;
+}
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+}
+#options-container button:disabled {
+  border: 3px solid #808080;
+  color: #808080;
+  background-color: #efefef;
+}
+#options-container button.active {
+  background-color: #f4c531;
+  border: 3px solid #000000;
+  color: #000000;
+} 
+
+#difficulty-container {
+  text-align: center;
+}
+#difficulty-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+#difficulty-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+}
+#difficulty-container button:disabled {
+  border: 3px solid #808080;
+  color: #808080;
+  background-color: #efefef;
+}
+#difficulty-container button.active {
+  background-color: #f4c531;
+  border: 3px solid #000000;
+  color: #000000;
+}
+
+#difficulty-container .levels {
+  margin-right: 30px; /* Adjust the margin as needed */
+}
+
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
+}
+#letter-container button {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+}
+.new-game-popup {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.6em;
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8em;
+  margin: 0.6em 0 1.2em 0;
+}
+canvas {
+  display: block;
+  margin: auto;
+  border: 1px solid #000000;
+}
+.hide {
+  display: none;
+}
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  background-color: #f4c531;
+  border: 3px solid #000000;
+  color: #000000;
+  border-radius: 0.2em;
+}
+.win-msg {
+  color: #39d78d;
+}
+.lose-msg {
+  color: #fe5152;
+}
+#score-container {
+  text-align: center; /* Center the content */
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#score {
+  font-size: 24px; /* Increase or decrease the font size as desired */
+  font-weight: bold; /* Make the text bold */
+  color: #ef1616; /* Set the text color to a rich gold color */
+}
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #2980b9;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ }
+ nav .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #2980b9;
+  margin: auto;
+ }
+ nav .navbar .logo a{
+   color: #fff;
+   font-size: 27px;
+   font-weight: 600;
+   text-decoration: none;
+ }
+ nav .navbar .menu{
+   display: flex;  
+ }
+ .navbar .menu li{
+   list-style: none;
+   margin: 0 15px;
+ }
+ .navbar .menu li a{
+   color: #fff;
+   font-size: 17px;
+   font-weight: 500;
+   text-decoration: none;
+ }
+ 
+ /* Style the "Rules" button container to position it below the header */
+#rules-button-container {
+  text-align: right; /* Center-align the button */
+  margin-top: 80px;
+  margin-right: 80px /* Add margin to separate it from the header */
+}
+
+#hints-button-container {
+  text-align: right; /* Center-align the button */
+  margin-top: 80px;
+  margin-right: 80px /* Add margin to separate it from the header */
+}
+
+#color-button-container {
+   /* Center-align the button */
+  margin-top: 100px;
+  text-align: right; /* Align the button to the right */
+  margin-top: 80px;
+  margin-right: 50px/* Add margin to separate it from the header */
+}
+
+/* Style the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* Style the "Rules" button */
+#rules-button {
+  background-color: #d71717; /* Button background color */
+  color: #fff; /* Button text color */
+  font-size: 18px; /* Button text size */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+#hints-button {
+  background-color: #d71717; /* Button background color */
+  color: #fff; /* Button text color */
+  font-size: 18px; /* Button text size */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+#color-button {
+  background-color: #d71717; /* Button background color */
+  color: #fff; /* Button text color */
+  font-size: 18px; /* Button text size */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+#rules-button:hover {
+  background-color: #e67314; /* Hover color */
+}
+
+#rules-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Additional styles for button to ensure readability */
+#rules-button {
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+}
+
+#hints-button:hover {
+  background-color: #e67314; /* Hover color */
+}
+
+#hints-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Additional styles for button to ensure readability */
+#hints-button {
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+}

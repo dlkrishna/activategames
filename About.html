@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Activate Games</title>
+   
+    <!-- Include any additional styles or libraries you need -->
+    <style>
+        /* Style the background image */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #2980b9;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ }
+ nav .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  background: #2980b9;
+  margin: auto;
+ }
+ nav .navbar .logo a{
+   color: #fff;
+   font-size: 27px;
+   font-weight: 600;
+   text-decoration: none;
+ }
+ nav .navbar .menu{
+   display: flex;  
+ }
+ .navbar .menu li{
+   list-style: none;
+   margin: 0 15px;
+ }
+ .navbar .menu li a{
+   color: #fff;
+   font-size: 17px;
+   font-weight: 500;
+   text-decoration: none;
+ }
+/* Style the header to match the home screen header */
+
+
+/* Style the "About" section */
+.about-section {
+  background-color: rgba(255, 255, 255, 0.958);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Animate the "About" section entrance */
+.about-section {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Add a subtle box shadow to the "About" section for depth */
+.about-section {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: bottom;
+}
+
+.navbar, .menu a, .logo a {
+    font-family: 'Poppins', sans-serif;
+}
+    </style>
+  </head>
+  <body style="background-image: url('./images/m.jpeg'); background-size: cover;">
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="logo"><a href="#">Activate Games</a></div>
+          <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="about-section">
+        <div class="about-content">
+          <h2>About Activate Games</h2>
+          <p>Welcome to Activate Games, your gateway to a world of fun and memory-enhancing games. We believe that memory games play a crucial role in improving cognitive skills, especially in young minds. Our games are designed with the aim of not only entertaining but also enhancing memory, concentration, and problem-solving abilities.</p>
+          <p>Memory games are essential for kids as they help stimulate the brain, improve concentration, and sharpen memory retention. These games are not only a source of entertainment but also a valuable learning tool. They promote cognitive development, boost memory power, and provide a mental workout that can be enjoyed by players of all ages.</p>
+          <p>Our team is dedicated to creating games that are not only enjoyable but also educational. We invite you to explore our games and embark on a journey to enhance memory skills while having a great time!</p>
+        </div>
+      </section>
+    </main>
+   
+  </body>
+</html>
