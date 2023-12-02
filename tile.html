@@ -14,14 +14,82 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Contact.html">Contact</a></li>
-            
+            <li><a href="Dashboard.html">Dashboard</a></li>
           </ul>
         </div>
       </nav>
+      <style>
+       
+button {
+    background: red;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+button:disabled {
+    opacity: 0.5;
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.power-up:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d; /* Adjust text color for better visibility */
+    cursor: not-allowed;
+    opacity: 0.7; /* Optionally reduce opacity for disabled appearance */
+    /* Additional styles for disabled state */
+}
+
+
+      </style>
 </head>
 <body style="background-image:url('./images/dp.jpeg');background-repeat:no-repeat;background-size:cover;">
     <div class="game">
+      
+    
+        <!-- Add a rules button -->
+<div id="hints-button-container">
+<button id="rulesButton">Rules</button>
+</div>
+<span id="quizScore" class="quizScore"> Quiz Score : 0</span>
+<div id="rulesPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <h2>Rules to Play the Tile Memory Game</h2></br>
+        <p> <b>Objective: </b> Match all pairs of tiles with the same symbols. </br></br>
+
+            <b>Gameplay:</b> Click on two tiles to reveal their symbols.
+            Matching pairs stay face-up; mismatches flip back.</br></br>
+            
+           <b> Strategy: </b>Remember tile positions to make successful matches efficiently.</br></br>
+           
+           <b>Win Condition:</b> Clear the board by matching all tiles. </br></br>
+            
+           <b>Optional Features:</b>Power-Ups: Use power-ups strategically for advantages.</p>
+    </div>
+</div>
+
+<div class="quiz-popup" id="quizPopup" style="display: none;">
+    <div class="question" id="quizQuestion"></div>
+    <div class="options">
+        <button class="option" id="option1"></button>
+        <button class="option" id="option2"></button>
+    </div>
+</div>
+
+<div class="dimension-buttons">
+    <button onclick="changeDimension(2)">2x2</button>
+    <button onclick="changeDimension(4)">4x4</button>
+    <button onclick="changeDimension(6)">6x6</button>
+</div> </br>
         <div class="controls">
+            <button id="powr-up" class="power-up" disabled="true">Power Up</button>
             <button>Start</button>
             <div class="stats">
                 <div class="moves">0 moves</div>
