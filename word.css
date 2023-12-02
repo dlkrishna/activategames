@@ -4,11 +4,19 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background-color: #f4c531;
 }
+
+/*  CSS for Responsiveness */
 .container {
+  max-width: 100%;
   
+}
+
+
+.container {
   height: 680px; /* Adjust the height as needed */
   font-size: 16px;
   background-color: #ffffff;
@@ -23,9 +31,10 @@ body {
   box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
 }
 
+
+
 /* Style for the Hangman container with default color */
 .container {
-  
   background-color: white; /* Default color */
 }
 
