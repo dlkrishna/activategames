@@ -7,7 +7,6 @@ const newGameContainer = document.getElementById("new-game-container");
 const newGameButton = document.getElementById("new-game-button");
 const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
-
 options = {
   fruits: {
     easy: ["Apple", "Pear", "Banana", "Cherry"],
