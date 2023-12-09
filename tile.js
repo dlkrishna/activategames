@@ -9,7 +9,6 @@ const selectors = {
     shareButton: document.querySelector('.share'),
     
 }
-
 const state = {
     gameStarted: false,
     flippedCards: 0,
